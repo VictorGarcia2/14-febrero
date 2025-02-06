@@ -1,9 +1,9 @@
 import React from 'react'
-import Background from './components/background'
+import Card from './components/Card'
 export default function App() {
   return (
    <>
-   <Background/>
+   <Card/>
    
    </>
   )
