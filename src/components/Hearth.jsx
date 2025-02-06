@@ -66,7 +66,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2389.jpeg",
         position: getRandomPosition(),
-        copy: "Tan bella!",
+        copy: "11/02 siempre en mi corazon!",
       },
     ]);
   }, []);
