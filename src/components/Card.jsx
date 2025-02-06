@@ -48,7 +48,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             ¿Alguien alguna vez se ha preguntado qué es lo más bonito en esta
             vida?... Ciertamente, tú. Claro, para mí lo eres.
             <br />
-            En este día tan especial, celebro tu cumpleaños número 3 a tu lado,
+            En este día tan especial, celebro tu cumpleaños número 23 a tu lado,
             con maravillosas experiencias de gran valor para ti.
             <br />
           </p>
@@ -76,8 +76,8 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             className="z-10 font-body  text-5xl text-violet-900 mt-15 px-8"
             data-aos="fade-left"
           >
-            Aunque yo no haya estado en todos los mejores o peores momentos de
-            tu vida...
+            Aunque yo no haya estado en todos los mejores o malos momentos de
+            tu vida para apoyarte...
           </p>
           <br />
           <p
