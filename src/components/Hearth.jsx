@@ -16,19 +16,19 @@ export default function Hearth({ counter, setCounter }) {
       {
         id: 1,
         clicked: false,
-        img: "/public/IMG_2635.jpeg",
+        img: "IMG_2635.jpeg",
         position: getRandomPosition(),
       },
       {
         id: 2,
         clicked: false,
-        img: "/public/IMG_2064.jpeg",
+        img: "IMG_2064.jpeg",
         position: getRandomPosition(),
       },
       {
         id: 3,
         clicked: false,
-        img: "/public/IMG_2376.jpeg",
+        img: "IMG_2376.jpeg",
         position: getRandomPosition(),
       },
     ]);
@@ -68,7 +68,7 @@ export default function Hearth({ counter, setCounter }) {
         <img
           onClick={() => handleHeartClick(heart.id)}
           className={`${heart.clicked ? "hidden" : ""} opacity-6 w-15`}
-          src="/public/138418700_361f67ed-eac8-4cc3-a3df-2ad899975270.svg"
+          src="138418700_361f67ed-eac8-4cc3-a3df-2ad899975270.svg"
           alt="Heart Icon"
         />
         <div
