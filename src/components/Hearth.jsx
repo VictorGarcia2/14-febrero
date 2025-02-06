@@ -66,7 +66,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2389.jpeg",
         position: getRandomPosition(),
-        copy: "11/02 siempre en mi corazon!",
+        copy: "11/01 siempre en mi corazon!",
       },
     ]);
   }, []);
@@ -84,7 +84,7 @@ export default function Hearth({ counter, setCounter }) {
     if (newCounter === 8) {
       setTimeout(() => {
         setModalCongrats(true);
-      }, 500);
+      }, 1000);
     }
   };
 
