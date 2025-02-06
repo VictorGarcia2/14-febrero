@@ -21,7 +21,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
           controls
         ></audio>
       </div>
-      <div className={`${modal && "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"} h-screen `}>
+      <div className={`${modal && "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"} w-full h-screen `}>
         <div className="size-44 absolute -z-40  left-5 filter  blur-3xl top-70 bg-violet-400 rounded-full "></div>
         <div className="flex  flex-col justify-center align-middle pt-16">
           <h2
@@ -82,7 +82,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
           </p>
           <br />
           <p
-            className="z-10 font-body  text-5xl text-violet-900 mt-15 px-8"
+            className="z-10 font-body w-full  text-4xl text-violet-900 mt-15 px-8"
             data-aos="fade-left"
           >
             Celebro contigo nuestra hermosa relación.
