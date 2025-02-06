@@ -31,6 +31,13 @@ export default function Hearth({ counter, setCounter }) {
         img: "IMG_2376.jpeg",
         position: getRandomPosition(),
       },
+      {
+        id: 4,
+        clicked: false,
+        img: false,
+        position: getRandomPosition(),
+        copy: "Eres hermosa"
+      },
     ]);
   }, []);
 
@@ -44,8 +51,12 @@ export default function Hearth({ counter, setCounter }) {
     const newCounter = counter + 1;
     setCounter(newCounter);
 
-    if (newCounter === hearts.length) {
-      setModalCongrats(true);
+    if (newCounter === 5
+    ) {
+        setTimeout(() => {
+            
+            setModalCongrats(true);
+        }, 500);
     }
   };
 
@@ -67,7 +78,7 @@ export default function Hearth({ counter, setCounter }) {
       >
         <img
           onClick={() => handleHeartClick(heart.id)}
-          className={`${heart.clicked ? "hidden" : ""} opacity-6 w-15`}
+          className={`${heart.clicked ? "hidden":''} opacity-6  w-15`}
           src="138418700_361f67ed-eac8-4cc3-a3df-2ad899975270.svg"
           alt="Heart Icon"
         />
@@ -76,23 +87,28 @@ export default function Hearth({ counter, setCounter }) {
             !heart.clicked ? "hidden" : ""
           } w-60 flex mx-auto pb-20  justify-center items-center fixed inset-0 `}
         >
-          <div className="shadow-2xl  w-60 flex flex-col justify-end text-end border border-gray-400 rounded-2xl bg-violet-100 p-4">
+          <div className="shadow-2xl z-50  w-60 flex flex-col justify-end text-end border border-gray-400 rounded-2xl bg-violet-100 p-4">
             <p
               onClick={() => handleCloseClick(heart.id)}
               className="font-body text-2xl text-violet-500 mt-0 cursor-pointer"
             >
               x
             </p>
-            <img className=" rounded-2xl" src={heart.img} alt="Card Image" />
+            <img className={` ${heart.img || "hidden"} rounded-2xl`} src={heart.img} alt="Card Image" />
+            <p className="font-display text-2xl">{heart.copy}</p>
           </div>
         </div>
       </div>
     ))}
 
     {modalCongrats && (
-      <div className="font-body text-center">
-        <h3>Felicidades, has encontrado todos los Corazones.</h3>
-        <p>Te amo mucho amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
+      <div className="bg-black/50 font-body text-center fixed  z-30  inset-0">
+        <div className=" mt-80 bg-violet-100 p-4 text-violet-500">
+        <h3 className="text-2xl font-black">Felicidades, has encontrado todos los Corazones.</h3>
+        <p className="text-sm">Te amo mucho amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
+        <br />
+        <p className="text-sm">Te haz ganado unos besos de Mono conmigo, que priviligiada </p>
+        </div>
       </div>
     )}
   </>
