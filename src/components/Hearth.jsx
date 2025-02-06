@@ -100,14 +100,14 @@ export default function Hearth({ counter, setCounter}) {
       >
         <img
           onClick={() => handleHeartClick(heart.id)}
-          className={`${heart.clicked ? "hidden":''} opacity-6  w-15`}
+          className={`${heart.clicked ? "hidden":''} opacity-6 z-10 w-15`}
           src="138418700_361f67ed-eac8-4cc3-a3df-2ad899975270.svg"
           alt="Heart Icon"
         />
         <div
           className={`${
             !heart.clicked ? "hidden" : ""
-          } w-60 flex mx-auto pb-20  justify-center items-center fixed inset-0 `}
+          } w-60 flex mx-auto pb-20 z-50 justify-center items-center fixed inset-0 `}
         >
           <div className="shadow-2xl z-50  w-60 flex flex-col justify-end text-end border border-gray-400 rounded-2xl bg-violet-100 p-4">
             <p
