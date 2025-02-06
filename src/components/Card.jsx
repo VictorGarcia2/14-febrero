@@ -24,7 +24,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
       <div className={`${modal && "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"} w-full h-screen `}>
        <div className="flex justify-center my-auto items-center">
         <div className="size-44 absolute -z-40 flex justify-center items-center align-middle left-56 top-10 bg-violet-300 rounded-full ">
-        <img className="animate-spin animate-infinite animate-duration-[10000ms] animate-ease-in animate-normal filter blur-none" src="/public/freepik__background__38057.png" alt="" />
+        <img className="animate-spin animate-infinite animate-duration-[10000ms] animate-ease-in animate-normal filter blur-none" src="freepik__background__38057.png" alt="" />
         </div>
        </div>
         <div className="flex  flex-col justify-center align-middle pt-16">
@@ -61,7 +61,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             gran persona.
           </p>
           <div className="flex justify-center items-center align-middle size-44 absolute mt[270px] -z-40  ml-48   bg-violet-300 rounded-full ">
-            <img className="animate-spin animate-infinite animate-duration-[10000ms] animate-ease-in animate-normal filter blur-none" src="/public/freepik__background__38057.png" alt="" />
+            <img className="animate-spin animate-infinite animate-duration-[10000ms] animate-ease-in animate-normal filter blur-none" src="freepik__background__38057.png" alt="" />
           </div>
           <br />
           <p
