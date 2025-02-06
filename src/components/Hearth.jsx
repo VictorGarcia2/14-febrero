@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-export default function Hearth({ counter, setCounter }) {
+export default function Hearth({ counter, setCounter}) {
   const [hearts, setHearts] = useState([]);
   const [modalCongrats, setModalCongrats] = useState(false);
 
   // Función para generar posiciones aleatorias
   const getRandomPosition = () => ({
     top: `${Math.floor(Math.random() * 300) + 10}vh`, // Posición vertical aleatoria (entre 10vh y 80vh)
-    left: `${Math.floor(Math.random() * 80) + 10}vw`, // Posición horizontal aleatoria (entre 10vw y 90vw)
+    left: `${Math.floor(Math.random() * 50) + 10}vw`, // Posición horizontal aleatoria (entre 10vw y 90vw)
   });
 
   useEffect(() => {
@@ -18,6 +18,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2635.jpeg",
         position: getRandomPosition(),
+        copy: "Nos vemos increibles"
       },
       {
         id: 2,
@@ -38,6 +39,27 @@ export default function Hearth({ counter, setCounter }) {
         position: getRandomPosition(),
         copy: "Eres hermosa"
       },
+      {
+        id: 5,
+        clicked: false,
+        img: false,
+        position: getRandomPosition(),
+        copy: "Adoro tu sonrisa"
+      },
+      {
+        id: 6,
+        clicked: false,
+        img: false,
+        position: getRandomPosition(),
+        copy: "Te amo!❤️"
+      },
+      {
+        id: 7,
+        clicked: false,
+        img: false,
+        position: getRandomPosition(),
+        copy: "Tan bella!"
+      },
     ]);
   }, []);
 
@@ -51,7 +73,7 @@ export default function Hearth({ counter, setCounter }) {
     const newCounter = counter + 1;
     setCounter(newCounter);
 
-    if (newCounter === 5
+    if (newCounter === 7
     ) {
         setTimeout(() => {
             
@@ -95,19 +117,19 @@ export default function Hearth({ counter, setCounter }) {
               x
             </p>
             <img className={` ${heart.img || "hidden"} rounded-2xl`} src={heart.img} alt="Card Image" />
-            <p className="font-display text-2xl">{heart.copy}</p>
+            <p className="font-body text-2xl">{heart.copy}</p>
           </div>
         </div>
       </div>
     ))}
 
     {modalCongrats && (
-      <div className="bg-black/50 font-body text-center fixed  z-30  inset-0">
-        <div className=" mt-80 bg-violet-100 p-4 text-violet-500">
+      <div className="bg-black/90 font-body text-center fixed  z-30  inset-0">
+        <div className=" mt-72 bg-violet-100 p-4 text-violet-500">
         <h3 className="text-2xl font-black">Felicidades, has encontrado todos los Corazones.</h3>
         <p className="text-sm">Te amo mucho amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
         <br />
-        <p className="text-sm">Te haz ganado unos besos de Mono conmigo, que priviligiada </p>
+        <p className="text-sm ">Te haz ganado unos besos de Mono conmigo, que priviligiada </p>
         </div>
       </div>
     )}
