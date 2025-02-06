@@ -115,7 +115,7 @@ export default function Hearth({ counter, setCounter }) {
               !heart.clicked ? "hidden" : ""
             } w-60 flex mx-auto pb-20 z-50 justify-center items-center fixed inset-0 `}
           >
-            <div className="shadow-2xl z-50  w-60 flex flex-col justify-end text-end border border-gray-400 rounded-2xl bg-violet-100 p-4">
+            <div className="animate-jump-in animate-once animate-duration-[2000ms] shadow-2xl z-50  w-60 flex flex-col justify-end text-end border border-gray-400 rounded-2xl bg-violet-100 p-4">
               <p
                 onClick={() => handleCloseClick(heart.id)}
                 className="font-body text-2xl text-violet-500 mt-0 cursor-pointer"
@@ -123,7 +123,7 @@ export default function Hearth({ counter, setCounter }) {
                 x
               </p>
               <img
-                className={` ${heart.img || "hidden"} rounded-2xl`}
+                className={` ${heart.img || "hidden"} rounded-2xl `}
                 src={heart.img}
                 alt="Card Image"
               />

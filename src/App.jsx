@@ -13,7 +13,7 @@ const {audioRef,audioFile, handlePlayAudio} = AudioPlayer()
   return (
    <>
    <Carta modal={modal} setModal={setModal} handleclick={handleclick}/>
-   <Card audioFile={audioFile} audioRef={audioRef} />
+   <Card modal={modal} audioFile={audioFile} audioRef={audioRef} />
    </>
   )
 }

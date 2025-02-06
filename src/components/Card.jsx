@@ -3,15 +3,17 @@ import Hearth from "./Hearth";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export default function Card({ audioRef, audioFile, handlePlayAudio }) {
+export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
   const [counter, setCounter] = useState(0);
   useEffect(() => {
     Aos.init();
   }, []);
 
+  
+
   return (
     <>
-      <div>
+      <div className="">
         <audio
           className="opacity-0"
           src={audioFile}
@@ -19,7 +21,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio }) {
           controls
         ></audio>
       </div>
-      <div className="  h-screen ">
+      <div className={`${modal && "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"} h-screen `}>
         <div className="size-44 absolute -z-40  left-5 filter  blur-3xl top-70 bg-violet-400 rounded-full "></div>
         <div className="flex  flex-col justify-center align-middle pt-16">
           <h2
