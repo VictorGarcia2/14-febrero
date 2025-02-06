@@ -61,6 +61,13 @@ export default function Hearth({ counter, setCounter }) {
         position: getRandomPosition(),
         copy: "Tan bella!",
       },
+      {
+        id: 8,
+        clicked: false,
+        img: "IMG_2389.jpeg",
+        position: getRandomPosition(),
+        copy: "Tan bella!",
+      },
     ]);
   }, []);
 
@@ -74,7 +81,7 @@ export default function Hearth({ counter, setCounter }) {
     const newCounter = counter + 1;
     setCounter(newCounter);
 
-    if (newCounter === 7) {
+    if (newCounter === 8) {
       setTimeout(() => {
         setModalCongrats(true);
       }, 500);
