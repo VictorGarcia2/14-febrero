@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Confetti from "canvas-confetti";
 
-export default function Hearth({ counter, setCounter}) {
+export default function Hearth({ counter, setCounter }) {
   const [hearts, setHearts] = useState([]);
   const [modalCongrats, setModalCongrats] = useState(false);
 
@@ -18,7 +19,7 @@ export default function Hearth({ counter, setCounter}) {
         clicked: false,
         img: "IMG_2635.jpeg",
         position: getRandomPosition(),
-        copy: "Nos vemos increibles"
+        copy: "Nos vemos increíbles",
       },
       {
         id: 2,
@@ -37,28 +38,28 @@ export default function Hearth({ counter, setCounter}) {
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Eres hermosa"
+        copy: "Eres hermosa",
       },
       {
         id: 5,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Adoro tu sonrisa"
+        copy: "Adoro tu sonrisa",
       },
       {
         id: 6,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Te amo!❤️"
+        copy: "Te amo!❤️",
       },
       {
         id: 7,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Tan bella!"
+        copy: "Tan bella!",
       },
     ]);
   }, []);
@@ -73,12 +74,10 @@ export default function Hearth({ counter, setCounter}) {
     const newCounter = counter + 1;
     setCounter(newCounter);
 
-    if (newCounter === 7
-    ) {
-        setTimeout(() => {
-            
-            setModalCongrats(true);
-        }, 500);
+    if (newCounter === 7) {
+      setTimeout(() => {
+        setModalCongrats(true);
+      }, 500);
     }
   };
 
@@ -90,49 +89,62 @@ export default function Hearth({ counter, setCounter}) {
     );
   };
 
+  useEffect(() => {
+    Confetti();  // Esto dispara el confeti
+    // Inicia el confeti cuando el modalCongrats sea true
+    if (modalCongrats) {
+    }
+  }, [modalCongrats]);
+
   return (
     <>
-    {hearts.map((heart) => (
-      <div
-        key={heart.id}
-        className="z-10 absolute cursor-pointer"
-        style={{ top: heart.position.top, left: heart.position.left }}
-      >
-        <img
-          onClick={() => handleHeartClick(heart.id)}
-          className={`${heart.clicked ? "hidden":''} opacity-6 z-10 w-15`}
-          src="138418700_361f67ed-eac8-4cc3-a3df-2ad899975270.svg"
-          alt="Heart Icon"
-        />
+      {hearts.map((heart) => (
         <div
-          className={`${
-            !heart.clicked ? "hidden" : ""
-          } w-60 flex mx-auto pb-20 z-50 justify-center items-center fixed inset-0 `}
+          key={heart.id}
+          className="z-10 absolute cursor-pointer"
+          style={{ top: heart.position.top, left: heart.position.left }}
         >
-          <div className="shadow-2xl z-50  w-60 flex flex-col justify-end text-end border border-gray-400 rounded-2xl bg-violet-100 p-4">
-            <p
-              onClick={() => handleCloseClick(heart.id)}
-              className="font-body text-2xl text-violet-500 mt-0 cursor-pointer"
-            >
-              x
-            </p>
-            <img className={` ${heart.img || "hidden"} rounded-2xl`} src={heart.img} alt="Card Image" />
-            <p className="font-body text-2xl">{heart.copy}</p>
+          <img
+            onClick={() => handleHeartClick(heart.id)}
+            className={`${heart.clicked ? "hidden" : ""} opacity-6 z-10 w-15`}
+            src="138418700_361f67ed-eac8-4cc3-a3df-2ad899975270.svg"
+            alt="Heart Icon"
+          />
+          <div
+            className={`${
+              !heart.clicked ? "hidden" : ""
+            } w-60 flex mx-auto pb-20 z-50 justify-center items-center fixed inset-0 `}
+          >
+            <div className="shadow-2xl z-50  w-60 flex flex-col justify-end text-end border border-gray-400 rounded-2xl bg-violet-100 p-4">
+              <p
+                onClick={() => handleCloseClick(heart.id)}
+                className="font-body text-2xl text-violet-500 mt-0 cursor-pointer"
+              >
+                x
+              </p>
+              <img
+                className={` ${heart.img || "hidden"} rounded-2xl`}
+                src={heart.img}
+                alt="Card Image"
+              />
+              <p className="font-body text-2xl">{heart.copy}</p>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
+      ))}
 
-    {modalCongrats && (
-      <div className="bg-black/90 font-body text-center fixed  z-30  inset-0">
-        <div className=" mt-72 bg-violet-100 p-4 text-violet-500">
-        <h3 className="text-2xl font-black">Felicidades, has encontrado todos los Corazones.</h3>
-        <p className="text-sm">Te amo mucho amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
-        <br />
-        <p className="text-sm ">Te haz ganado unos besos de Mono conmigo, que priviligiada </p>
+      {modalCongrats && (
+        <div className="bg-black/90 font-body text-center fixed z-30 inset-0">
+          <div className="mt-72 bg-violet-100 p-4 text-violet-500">
+            <h3 className="text-2xl font-black">Felicidades, has encontrado todos los Corazones.</h3>
+            <p className="text-sm">Te amo mucho amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
+            <br />
+            <p className="text-sm ">
+              Te has ganado unos besos de Mono conmigo, qué privilegiada
+            </p>
+          </div>
         </div>
-      </div>
-    )}
-  </>
+      )}
+    </>
   );
 }
