@@ -90,9 +90,9 @@ export default function Hearth({ counter, setCounter }) {
   };
 
   useEffect(() => {
-    Confetti();  // Esto dispara el confeti
     // Inicia el confeti cuando el modalCongrats sea true
     if (modalCongrats) {
+      Confetti();  // Esto dispara el confeti
     }
   }, [modalCongrats]);
 
