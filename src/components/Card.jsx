@@ -22,7 +22,11 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
         ></audio>
       </div>
       <div className={`${modal && "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"} w-full h-screen `}>
-        <div className="size-44 absolute -z-40  left-5 filter  blur-3xl top-70 bg-violet-400 rounded-full "></div>
+       <div className="flex justify-center my-auto items-center">
+        <div className="size-44 absolute -z-40 flex justify-center items-center align-middle left-56 top-10 bg-violet-300 rounded-full ">
+        <img className="animate-spin animate-infinite animate-duration-[10000ms] animate-ease-in animate-normal filter blur-none" src="/public/freepik__background__38057.png" alt="" />
+        </div>
+       </div>
         <div className="flex  flex-col justify-center align-middle pt-16">
           <h2
             className="z-10 font-body text-5xl text-violet-900 px-8"
@@ -56,7 +60,9 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             Celebro contigo los días de esfuerzo que has dedicado para ser una
             gran persona.
           </p>
-          <div className="size-44 absolute mt[400px] -z-40  ml-48 filter  blur-3xl  bg-red-400 rounded-full "></div>
+          <div className="flex justify-center items-center align-middle size-44 absolute mt[270px] -z-40  ml-48   bg-violet-300 rounded-full ">
+            <img className="animate-spin animate-infinite animate-duration-[10000ms] animate-ease-in animate-normal filter blur-none" src="/public/freepik__background__38057.png" alt="" />
+          </div>
           <br />
           <p
             className="z-10 font-body  text-2xl text-violet-900 mt-15 px-8"
