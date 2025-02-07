@@ -143,7 +143,7 @@ export default function Hearth({ counter, setCounter }) {
 
       {modalCongrats && (
         <div className="bg-violet-100 font-body text-center fixed z-30 inset-0">
-          <div className="mt-72  p-4 text-violet-500">
+          <div className="mt-60  p-4 text-violet-500">
             <h3 className="text-2xl font-black">Felicidades, has encontrado todos los Corazones.</h3>
             <p className="text-sm">Te amo mucho amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
             <br />
