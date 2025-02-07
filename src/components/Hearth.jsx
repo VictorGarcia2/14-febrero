@@ -26,6 +26,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2064.jpeg",
         position: getRandomPosition(),
+        copy: "Lo eres todo para mí."
       },
       {
         id: 3,
@@ -38,7 +39,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Eres hermosa",
+        copy: "Eres hermosa 😍",
       },
       {
         id: 5,
