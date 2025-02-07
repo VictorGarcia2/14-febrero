@@ -19,14 +19,14 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2635.jpeg",
         position: getRandomPosition(),
-        copy: "Nos vemos increíbles",
+        copy: "Nos vemos increíbles.",
       },
       {
         id: 2,
         clicked: false,
         img: "IMG_2064.jpeg",
         position: getRandomPosition(),
-        copy: "Lo eres todo para mí."
+        copy: "Lo eres todo para mí.",
       },
       {
         id: 3,
@@ -39,35 +39,35 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Eres hermosa 😍",
+        copy: "Eres hermosa. 😍",
       },
       {
         id: 5,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Adoro tu sonrisa",
+        copy: "Adoro tu sonrisa.",
       },
       {
         id: 6,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Te amo!❤️",
+        copy: "¡Te amo! ❤️",
       },
       {
         id: 7,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Tan bella!",
+        copy: "¡Tan bella!",
       },
       {
         id: 8,
         clicked: false,
         img: "IMG_2389.jpeg",
         position: getRandomPosition(),
-        copy: "11/01 siempre en mi corazon!",
+        copy: "11/01, siempre en mi corazón!",
       },
     ]);
   }, []);
@@ -100,7 +100,7 @@ export default function Hearth({ counter, setCounter }) {
   useEffect(() => {
     // Inicia el confeti cuando el modalCongrats sea true
     if (modalCongrats) {
-      Confetti();  // Esto dispara el confeti
+      Confetti(); // Esto dispara el confeti
     }
   }, [modalCongrats]);
 
@@ -144,11 +144,11 @@ export default function Hearth({ counter, setCounter }) {
       {modalCongrats && (
         <div className="bg-violet-100 font-body text-center fixed z-30 inset-0">
           <div className="mt-60  p-4 text-violet-500">
-            <h3 className="text-2xl font-black">Felicidades, has encontrado todos los Corazones.</h3>
-            <p className="text-sm">Te amo mucho amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
+            <h3 className="text-2xl font-black">Felicidades, has encontrado todos los corazones.</h3>
+            <p className="text-sm">Te amo mucho, amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
             <br />
             <p className="text-sm ">
-              Te has ganado unos besos de Mono conmigo, qué privilegiada
+              Te has ganado unos besos de Mono conmigo, ¡qué privilegiada!
             </p>
           </div>
         </div>
