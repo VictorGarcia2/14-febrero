@@ -22,12 +22,12 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
         ></audio>
       </div>
       <div className={`${modal && "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"} w-full h-screen `}>
-       <div className="flex justify-center my-auto items-center">
+       <div className="flex justify-center my-auto items-center ">
         <div className="size-44 absolute -z-40 flex justify-center items-center align-middle left-56 top-10 bg-violet-300 rounded-full ">
         <img className="animate-spin animate-infinite animate-duration-[10000ms] animate-ease-in animate-normal filter blur-none" src="freepik__background__38057.png" alt="" />
         </div>
        </div>
-        <div className="flex  flex-col justify-center align-middle pt-16">
+        <div className="flex  flex-col justify-center align-middle pt-16 overflow-x-hidden">
           <h2
             className="z-10 font-body text-5xl text-violet-900 px-8"
             data-aos="fade-right"
