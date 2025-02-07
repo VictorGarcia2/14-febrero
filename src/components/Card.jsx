@@ -105,7 +105,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             className="z-10 font-body text-center  text-2xl text-violet-900 mt-15 px-8 pb-20"
             data-aos="fade-left"
           >
-            Encuentra los corazones invisibles: {counter}/7
+            Encuentra los corazones invisibles: {counter}/8
           </p>
 
           <Hearth

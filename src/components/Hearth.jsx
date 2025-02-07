@@ -84,7 +84,7 @@ export default function Hearth({ counter, setCounter }) {
     if (newCounter === 8) {
       setTimeout(() => {
         setModalCongrats(true);
-      }, 1000);
+      }, 2700);
     }
   };
 
