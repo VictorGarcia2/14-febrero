@@ -39,28 +39,28 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Eres hermosa. 😍",
+        copy: "Eres hermosa 😍",
       },
       {
         id: 5,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Adoro tu sonrisa.",
+        copy: "Adoro tu sonrisa",
       },
       {
         id: 6,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "¡Te amo! ❤️",
+        copy: "¡Me llenas de felicidad! ❤️",
       },
       {
         id: 7,
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "¡Tan bella!",
+        copy: "¡Eres lo mejor para mí!",
       },
       {
         id: 8,
@@ -87,6 +87,12 @@ export default function Hearth({ counter, setCounter }) {
         setModalCongrats(true);
       }, 2700);
     }
+    setTimeout(() => {
+      const newHeart = [...hearts];
+      const heartIndex = newHeart.findIndex((todo) => todo.id === id);
+      newHeart.splice(heartIndex, 1);
+      setHearts(newHeart);
+    }, 4000);
   };
 
   const handleCloseClick = (id) => {
@@ -144,8 +150,13 @@ export default function Hearth({ counter, setCounter }) {
       {modalCongrats && (
         <div className="bg-violet-100 font-body text-center fixed z-30 inset-0">
           <div className="mt-60  p-4 text-violet-500">
-            <h3 className="text-2xl font-black">Felicidades, has encontrado todos los corazones.</h3>
-            <p className="text-sm">Te amo mucho, amor de mi vida. ¡Que disfrutes mucho tu cumpleaños! 😘</p>
+            <h3 className="text-2xl font-black">
+              Felicidades, has encontrado todos los corazones.
+            </h3>
+            <p className="text-sm">
+              Te amo mucho, amor de mi vida. ¡Que disfrutes mucho tu cumpleaños!
+              😘
+            </p>
             <br />
             <p className="text-sm ">
               Te has ganado unos besos de Mono conmigo, ¡qué privilegiada!
