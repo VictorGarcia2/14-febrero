@@ -46,7 +46,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Adoro tu sonrisa",
+        copy: "Adoro tu sonrisa.",
       },
       {
         id: 6,
@@ -67,7 +67,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2389.jpeg",
         position: getRandomPosition(),
-        copy: "¡Por mas momentos así!",
+        copy: "11/01 en mí ❤️",
       },
       {
         id: 9,
