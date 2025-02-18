@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 
 export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
   const [counter, setCounter] = useState(0);
-
   useEffect(() => {
     Aos.init({
       offset: 200,
@@ -13,7 +12,6 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
       duration: 800
     });
   }, []);
-
   return (
     <>
       <div>
