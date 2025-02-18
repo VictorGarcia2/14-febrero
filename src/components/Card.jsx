@@ -9,7 +9,7 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
     Aos.init({
       offset: 200,
       once: true,
-      duration: 800
+      duration: 1400
     });
   }, []);
   return (
