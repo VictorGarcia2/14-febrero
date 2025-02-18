@@ -19,14 +19,14 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2635.jpeg",
         position: getRandomPosition(),
-        copy: "Nos vemos increíbles.",
+        copy: "¡Nos vemos bien guapos!",
       },
       {
         id: 2,
         clicked: false,
         img: "foto (1).jpeg",
         position: getRandomPosition(),
-        copy: "Lo eres todo para mí.",
+        copy: "¡Cuando sea y donde sea te ves increible!😍",
       },
       {
         id: 3,
@@ -39,7 +39,7 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: false,
         position: getRandomPosition(),
-        copy: "Eres hermosa 😍",
+        copy: "Eres hermosaaaaaaa 😍",
       },
       {
         id: 5,
@@ -67,21 +67,21 @@ export default function Hearth({ counter, setCounter }) {
         clicked: false,
         img: "IMG_2389.jpeg",
         position: getRandomPosition(),
-        copy: "11/01, siempre en mi corazón!",
+        copy: "¡Por mas momentos así!",
       },
       {
         id: 9,
         clicked: false,
         img: "foto (2).jpeg",
         position: getRandomPosition(),
-        copy: "11/01, siempre en mi corazón!",
+        copy: "Eres el amor de mi vida ❤️",
       },
       {
         id: 10,
         clicked: false,
         img: "foto (3).jpeg",
         position: getRandomPosition(),
-        copy: "11/01, siempre en mi corazón!",
+        copy: "¡No, no, no! Me encantas!!",
       },
     ]);
   }, []);

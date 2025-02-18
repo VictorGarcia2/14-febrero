@@ -49,9 +49,9 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             className="z-10 font-body text-2xl text-violet-900 mt-15 px-8"
             data-aos="fade-right"
           >
-            Han pasado 39 días desde que nos comvertimos en novios, y 158 días
+            Han pasado 39 días desde que nos convertimos en novios, y 158 días
             desde que comenzamos a hablar... <br />
-            no es que suene disco rayado repitiendo jaja. Sin embargo el día de
+            no es que suene disco rayado repitiendo jaja, sino que es algo que hare y luego nos demos cuenta del tiempo que ha transcurrido. Sin embargo el día de
             hoy te celebro a ti, por simplemente ser tu.
           </p>
           <br />
@@ -99,19 +99,18 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             data-aos="fade-right"
           >
             existen muchas cosas de ti por la cuales celebro y podria seguir
-            escribiendolas, sin embargo aprovecho esto expresar mi amor por ti.{" "}
+            escribiendolas, sin embargo aprovecho esto para expresar mi amor por ti.{" "}
             <br />y es que eres una persona que me hace sonreir. Porque eres la
-            mujer de mis ojos, que hace que mi corazon haga resonar asi como las
+            mujer de mis ojos, que hace que mi corazon resuene asi como las
             vias al pasar un tren... Tu amor es como una paloma blanca, igual de
             bella. y bella es la vida que me das...
              <br />
-          
           </p>
           <p
             className="z-10 font-body w-full text-4xl text-violet-900 mt-15 px-8"
             data-aos="fade-left"
           >
-            Espero que este día pueda ser muy lindo para tí. Mi amo! espero y te haya gustado este regalito. 
+            Espero que este día pueda ser muy lindo para tí. Mi amor! espero y te haya gustado este regalito. 
           </p>
           <h2
             className="z-10 font-body text-center text-2xl text-violet-900 mt-15 px-8"
@@ -121,10 +120,10 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
             ocultos, ¡búscalos!
           </h2>
           <p
-            className="z-10 font-body text-center text-2xl text-violet-900 mt-15 px-8 pb-20"
+            className="z-10 font-body text-center text-2xl text-violet-900 mt-15 px-8 pb-24"
             data-aos="fade-left"
           >
-            Encuentra los corazones invisibles: {counter}/8
+            Encuentra los corazones invisibles: {counter}/10
           </p>
 
           <Hearth
