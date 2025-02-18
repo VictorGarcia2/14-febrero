@@ -7,7 +7,11 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    Aos.init();
+    Aos.init({
+      offset: 200,
+      once: true,
+      duration: 800
+    });
   }, []);
 
   return (
@@ -20,7 +24,12 @@ export default function Card({ audioRef, audioFile, handlePlayAudio, modal }) {
           controls
         ></audio>
       </div>
-      <div className={`${modal && "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"} w-full h-screen`}>
+      <div
+        className={`${
+          modal &&
+          "animate-fade animate-once animate-duration-[3200ms] animate-ease-in-out animate-normal"
+        } w-full h-screen`}
+      >
         <div className="flex justify-center my-auto items-center">
           <div className="size-44 absolute -z-40 flex justify-center items-center align-middle left-56 top-10 bg-violet-300 rounded-full"></div>
         </div>
