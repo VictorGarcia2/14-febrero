@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import audioFile from '../../public/Coldplay - Yellow (Official Video) - Coldplay.mp3'; // Ajusta la ruta a tu archivo
+import audioFile from '../../public/audio.mp3'; // Ajusta la ruta a tu archivo
 
 const AudioPlayer = () => {
   // Crea una referencia para el elemento de audio
